@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <h2 class="mb-4">User Details</h2>
+    <div *ngIf="user">
+      <div *ngFor="let key of userKeys"> 
+        <strong>{{ key | titlecase }}:</strong> {{ user[key] }}
+      </div>
+    </div>
+    <div *ngIf="!user">
+      <p>No user details available.</p>
+    </div>
+  </div>
+  
